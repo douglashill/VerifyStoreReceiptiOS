@@ -17,11 +17,11 @@
 		1D795347183835580062D190 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D795346183835580062D190 /* XCTest.framework */; };
 		1D795348183835580062D190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D79532D183835580062D190 /* Foundation.framework */; };
 		1D795349183835580062D190 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D795331183835580062D190 /* UIKit.framework */; };
-		1D79535E183835D80062D190 /* VerifyStoreReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D79535D183835D80062D190 /* VerifyStoreReceipt.m */; };
 		1D795360183836170062D190 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D79535F183836170062D190 /* Security.framework */; };
 		1D7953631838367B0062D190 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7953611838367B0062D190 /* libcrypto.a */; };
 		1D7953641838367B0062D190 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7953621838367B0062D190 /* libssl.a */; };
 		1D795366183837D70062D190 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D795365183837D70062D190 /* StoreKit.framework */; };
+		A5E04C58185113DC00888286 /* VerifyStoreReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E04C57185113DC00888286 /* VerifyStoreReceipt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +48,13 @@
 		1D79533F183835580062D190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D795345183835580062D190 /* VerifyStoreReceiptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerifyStoreReceiptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D795346183835580062D190 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1D79535C183835D80062D190 /* VerifyStoreReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyStoreReceipt.h; sourceTree = "<group>"; };
-		1D79535D183835D80062D190 /* VerifyStoreReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyStoreReceipt.m; sourceTree = "<group>"; };
 		1D79535F183836170062D190 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1D7953611838367B0062D190 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../OpenSSL-for-iPhone/lib/libcrypto.a"; sourceTree = "<group>"; };
 		1D7953621838367B0062D190 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../OpenSSL-for-iPhone/lib/libssl.a"; sourceTree = "<group>"; };
 		1D795365183837D70062D190 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A5B78E751850E4CA008DCE53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A5E04C56185113DC00888286 /* VerifyStoreReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyStoreReceipt.h; sourceTree = "<group>"; };
+		A5E04C57185113DC00888286 /* VerifyStoreReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyStoreReceipt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				A5B78E751850E4CA008DCE53 /* .gitignore */,
+				A5E04C56185113DC00888286 /* VerifyStoreReceipt.h */,
+				A5E04C57185113DC00888286 /* VerifyStoreReceipt.m */,
 				1D795333183835580062D190 /* VerifyStoreReceipt */,
 				1D79532C183835580062D190 /* Frameworks */,
 				1D79532B183835580062D190 /* Products */,
@@ -124,8 +126,6 @@
 			children = (
 				1D79533C183835580062D190 /* RMAppDelegate.h */,
 				1D79533D183835580062D190 /* RMAppDelegate.m */,
-				1D79535C183835D80062D190 /* VerifyStoreReceipt.h */,
-				1D79535D183835D80062D190 /* VerifyStoreReceipt.m */,
 				1D79533F183835580062D190 /* Images.xcassets */,
 				1D795334183835580062D190 /* Supporting Files */,
 			);
@@ -240,7 +240,7 @@
 			files = (
 				1D79533A183835580062D190 /* main.m in Sources */,
 				1D79533E183835580062D190 /* RMAppDelegate.m in Sources */,
-				1D79535E183835D80062D190 /* VerifyStoreReceipt.m in Sources */,
+				A5E04C58185113DC00888286 /* VerifyStoreReceipt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
