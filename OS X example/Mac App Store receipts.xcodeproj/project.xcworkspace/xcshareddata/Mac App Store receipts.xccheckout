@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B55DEF9F-3B0F-42A7-83BE-29CE04BE4CB7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Mac App Store receipts</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2E8DD453-BF64-4463-842B-1AE8B14E4C80</key>
+		<string>https://github.com/douglashill/VerifyStoreReceiptiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mac App Store receipts/Mac App Store receipts.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2E8DD453-BF64-4463-842B-1AE8B14E4C80</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/douglashill/VerifyStoreReceiptiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2E8DD453-BF64-4463-842B-1AE8B14E4C80</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2E8DD453-BF64-4463-842B-1AE8B14E4C80</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VerifyStoreReceiptiOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
