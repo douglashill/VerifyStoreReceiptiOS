@@ -54,6 +54,7 @@
 		1D7953611838367B0062D190 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../OpenSSL-for-iPhone/lib/libcrypto.a"; sourceTree = "<group>"; };
 		1D7953621838367B0062D190 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../OpenSSL-for-iPhone/lib/libssl.a"; sourceTree = "<group>"; };
 		1D795365183837D70062D190 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A5B78E751850E4CA008DCE53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		1D795321183835570062D190 = {
 			isa = PBXGroup;
 			children = (
+				A5B78E751850E4CA008DCE53 /* .gitignore */,
 				1D795333183835580062D190 /* VerifyStoreReceipt */,
 				1D79532C183835580062D190 /* Frameworks */,
 				1D79532B183835580062D190 /* Products */,
