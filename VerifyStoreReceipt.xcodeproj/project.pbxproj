@@ -362,7 +362,7 @@
 				INFOPLIST_FILE = "VerifyStoreReceipt/VerifyStoreReceipt-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/rick/projects/home/iphone/OpenSSL-for-iPhone/lib",
+					"../OpenSSL-for-iPhone/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -384,7 +384,7 @@
 				INFOPLIST_FILE = "VerifyStoreReceipt/VerifyStoreReceipt-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/rick/projects/home/iphone/OpenSSL-for-iPhone/lib",
+					"../OpenSSL-for-iPhone/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
