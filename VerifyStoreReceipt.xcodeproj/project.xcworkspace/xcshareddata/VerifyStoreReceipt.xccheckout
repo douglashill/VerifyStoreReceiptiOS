@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C66EBB64-F96B-402D-BF16-FD56F9376150</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VerifyStoreReceipt</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2E8DD453-BF64-4463-842B-1AE8B14E4C80</key>
+		<string>https://github.com/douglashill/VerifyStoreReceiptiOS.git</string>
+		<key>51E171BD-B94F-4EED-858C-A19609225857</key>
+		<string>https://github.com/x2on/OpenSSL-for-iPhone.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VerifyStoreReceipt.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2E8DD453-BF64-4463-842B-1AE8B14E4C80</key>
+		<string>../..</string>
+		<key>51E171BD-B94F-4EED-858C-A19609225857</key>
+		<string>../../../OpenSSL-for-iPhone</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/douglashill/VerifyStoreReceiptiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2E8DD453-BF64-4463-842B-1AE8B14E4C80</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>51E171BD-B94F-4EED-858C-A19609225857</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OpenSSL-for-iPhone</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2E8DD453-BF64-4463-842B-1AE8B14E4C80</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VerifyStoreReceiptiOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
