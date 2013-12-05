@@ -130,7 +130,7 @@ const NSString * global_bundleIdentifier = @"com.example.SampleApp";
 }
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
-    NSLog(@"Error tryung to request receipt: %@", error);
+    NSLog(@"Error trying to request receipt: %@", error);
     
     // Unable to get/refresh the receipt
     NSString *appRecPath = [[[NSBundle mainBundle] appStoreReceiptURL] path];
