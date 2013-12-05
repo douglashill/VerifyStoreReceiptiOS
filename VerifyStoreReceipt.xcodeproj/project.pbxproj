@@ -452,6 +452,7 @@
 				1D795358183835580062D190 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D795359183835580062D190 /* Build configuration list for PBXNativeTarget "VerifyStoreReceiptTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +461,7 @@
 				1D79535B183835580062D190 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
