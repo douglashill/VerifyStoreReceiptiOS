@@ -57,6 +57,14 @@
 
 #define VRCFRelease(object) if(object) CFRelease(object)
 
+#define ENABLE_RECEIPT_VERIFICATION_LOGGING 1
+
+#if ENABLE_RECEIPT_VERIFICATION_LOGGING
+#define ReceiptLog(...) NSLog(__VA_ARGS__)
+#else
+#define ReceiptLog(...) do {} while 0
+#endif
+
 NSString *kReceiptBundleIdentifier				= @"BundleIdentifier";
 NSString *kReceiptBundleIdentifierData			= @"BundleIdentifierData";
 NSString *kReceiptVersion						= @"Version";
@@ -83,6 +91,8 @@ NSData *appleRootCert(void) {
     // Add the AppleIncRootCertificate.cer to your app's resource bundle.
 
     NSData *cert = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"AppleIncRootCertificate" withExtension:@"cer"]];
+	
+	if ([cert length] == 0) ReceiptLog(@"Could not load the Apple root certificate.");
     
 	return cert;
 }
@@ -308,6 +318,7 @@ NSDictionary *dictionaryWithAppStoreReceipt(NSString *receiptPath) {
 	const char * path = [[receiptPath stringByStandardizingPath] fileSystemRepresentation];
 	FILE *fp = fopen(path, "rb");
 	if (fp == NULL) {
+		ReceiptLog(@"Could not open receipt at %@.", [receiptPath stringByStandardizingPath]);
 		return nil;
     }
     
@@ -316,6 +327,7 @@ NSDictionary *dictionaryWithAppStoreReceipt(NSString *receiptPath) {
     
 	// Check if the receipt file was invalid (otherwise we go crashing and burning)
 	if (p7 == NULL) {
+		ReceiptLog(@"Could not create PKCS7 container.");
 		return nil;
 	}
     
