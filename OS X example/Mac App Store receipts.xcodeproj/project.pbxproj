@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A5E04C69185115C000888286 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E04C68185115C000888286 /* main.m */; };
 		A5E04C751851161100888286 /* VerifyStoreReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E04C741851161100888286 /* VerifyStoreReceipt.m */; };
+		A5E04C7C18511AF300888286 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E04C7A18511AF300888286 /* libcrypto.a */; };
+		A5E04C7D18511AF300888286 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E04C7B18511AF300888286 /* libssl.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,8 @@
 		A5E04C68185115C000888286 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5E04C731851161100888286 /* VerifyStoreReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyStoreReceipt.h; path = ../VerifyStoreReceipt.h; sourceTree = "<group>"; };
 		A5E04C741851161100888286 /* VerifyStoreReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerifyStoreReceipt.m; path = ../VerifyStoreReceipt.m; sourceTree = "<group>"; };
+		A5E04C7A18511AF300888286 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../OpenSSL-for-iPhone/lib/libcrypto.a"; sourceTree = "<group>"; };
+		A5E04C7B18511AF300888286 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../OpenSSL-for-iPhone/lib/libssl.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E04C7D18511AF300888286 /* libssl.a in Frameworks */,
+				A5E04C7C18511AF300888286 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +53,8 @@
 				A5E04C731851161100888286 /* VerifyStoreReceipt.h */,
 				A5E04C741851161100888286 /* VerifyStoreReceipt.m */,
 				A5E04C68185115C000888286 /* main.m */,
+				A5E04C7A18511AF300888286 /* libcrypto.a */,
+				A5E04C7B18511AF300888286 /* libssl.a */,
 				A5E04C63185115C000888286 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -189,7 +197,10 @@
 		A5E04C71185115C000888286 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../../OpenSSL-for-iPhone/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -197,7 +208,10 @@
 		A5E04C72185115C000888286 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../../OpenSSL-for-iPhone/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
