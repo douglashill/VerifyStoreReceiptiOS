@@ -208,6 +208,27 @@ static const uint8_t _AppleCert[] = {
 #define INAPP_WEBORDER      1711
 #define INAPP_CANCEL_DATE   1712
 
+static inline int _get_asn1_int(const uint8_t **pp, long maxlen) {
+
+    assert(pp && *pp);
+
+    long len = 0;
+    int type = 0, xclass = 0;
+    const uint8_t *p = *pp;
+
+    ASN1_get_object(&p, &len, &type, &xclass, maxlen);
+
+    int v = 0;
+    if (type == V_ASN1_INTEGER && (p+len)<=(*pp+maxlen)) {
+        for (; len>0; len--) {
+            v = (v << 8) + *p;
+            p ++;
+        }
+        *pp = p;
+    }
+    return v;
+}
+
 NSArray *parseInAppPurchasesData(NSData *inappData) {
 	int type = 0;
 	int xclass = 0;
@@ -246,30 +267,8 @@ NSArray *parseInAppPurchasesData(NSData *inappData) {
             
 			const uint8_t *seq_end = p + length;
             
-			int attr_type = 0;
-			int attr_version = 0;
-            
-			// Attribute type
-			ASN1_get_object(&p, &length, &type, &xclass, seq_end - p);
-			if (type == V_ASN1_INTEGER) {
-				if(length == 1) {
-					attr_type = p[0];
-				}
-				else if(length == 2) {
-					attr_type = p[0] * 0x100 + p[1]
-					;
-				}
-			}
-			p += length;
-            
-			// Attribute version
-			ASN1_get_object(&p, &length, &type, &xclass, seq_end - p);
-			if (type == V_ASN1_INTEGER && length == 1) {
-                // clang analyser hit (wontfix at the moment, since the code might come in handy later)
-                // But if someone has a convincing case throwing that out, I might do so, Roddi
-				attr_version = p[0];
-			}
-			p += length;
+			int attr_type = _get_asn1_int(&p, seq_end - p);
+			__unused int attr_version = _get_asn1_int(&p, seq_end - p);
             
 			// Only parse attributes we're interested in
 			if ((attr_type > INAPP_ATTR_START && attr_type < INAPP_ATTR_END) || attr_type == INAPP_SUBEXP_DATE || attr_type == INAPP_WEBORDER || attr_type == INAPP_CANCEL_DATE) {
@@ -281,25 +280,9 @@ NSArray *parseInAppPurchasesData(NSData *inappData) {
                     
 					// Integers
 					if (attr_type == INAPP_QUANTITY || attr_type == INAPP_WEBORDER) {
-						int num_type = 0;
-						long num_length = 0;
-						const uint8_t *num_p = p;
-						ASN1_get_object(&num_p, &num_length, &num_type, &xclass, seq_end - num_p);
-						if (num_type == V_ASN1_INTEGER) {
-							NSUInteger quantity = 0;
-							if (num_length) {
-								quantity += num_p[0];
-								if (num_length > 1) {
-									quantity += num_p[1] * 0x100;
-									if (num_length > 2) {
-										quantity += num_p[2] * 0x10000;
-										if (num_length > 3) {
-											quantity += num_p[3] * 0x1000000;
-										}
-									}
-								}
-							}
                             
+                        const uint8_t *num_p = p;
+                        NSUInteger quantity = _get_asn1_int(&num_p, seq_end-num_p);
 							NSNumber *num = [[NSNumber alloc] initWithUnsignedInteger:quantity];
                             if (attr_type == INAPP_QUANTITY) {
                                 [item setObject:num forKey:kReceiptInAppQuantity];
@@ -307,7 +290,6 @@ NSArray *parseInAppPurchasesData(NSData *inappData) {
                                 [item setObject:num forKey:kReceiptInAppWebOrderLineItemID];
                             }
 						}
-					}
                     
 					// Strings
 					if (attr_type == INAPP_PRODID ||
@@ -489,23 +471,8 @@ NSDictionary *dictionaryWithAppStoreReceipt(NSString *receiptPath) {
         
 		const uint8_t *seq_end = p + length;
         
-		int attr_type = 0;
-		int attr_version = 0;
-        
-		// Attribute type
-		ASN1_get_object(&p, &length, &type, &xclass, seq_end - p);
-		if (type == V_ASN1_INTEGER && length == 1) {
-			attr_type = p[0];
-		}
-		p += length;
-        
-		// Attribute version
-		ASN1_get_object(&p, &length, &type, &xclass, seq_end - p);
-		if (type == V_ASN1_INTEGER && length == 1) {
-			attr_version = p[0];
-			attr_version = attr_version;
-		}
-		p += length;
+		int attr_type = _get_asn1_int(&p, seq_end - p);
+		__unused int attr_version = _get_asn1_int(&p, seq_end - p);
         
 		// Only parse attributes we're interested in
 		if ((attr_type > ATTR_START && attr_type < ATTR_END) || attr_type == INAPP_PURCHASE || attr_type == ORIG_VERSION || attr_type == EXPIRE_DATE) {
