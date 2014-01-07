@@ -22,7 +22,6 @@
 		1D7953641838367B0062D190 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7953621838367B0062D190 /* libssl.a */; };
 		1D795366183837D70062D190 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D795365183837D70062D190 /* StoreKit.framework */; };
 		A5E04C58185113DC00888286 /* VerifyStoreReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E04C57185113DC00888286 /* VerifyStoreReceipt.m */; };
-		F6585F7B1851E30400C9074C /* AppleIncRootCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = F6585F7A1851E30400C9074C /* AppleIncRootCertificate.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		A5B78E751850E4CA008DCE53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A5E04C56185113DC00888286 /* VerifyStoreReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyStoreReceipt.h; sourceTree = "<group>"; };
 		A5E04C57185113DC00888286 /* VerifyStoreReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyStoreReceipt.m; sourceTree = "<group>"; };
-		F6585F7A1851E30400C9074C /* AppleIncRootCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleIncRootCertificate.cer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				A5B78E751850E4CA008DCE53 /* .gitignore */,
-				F6585F7A1851E30400C9074C /* AppleIncRootCertificate.cer */,
 				A5E04C56185113DC00888286 /* VerifyStoreReceipt.h */,
 				A5E04C57185113DC00888286 /* VerifyStoreReceipt.m */,
 				1D795333183835580062D190 /* VerifyStoreReceipt */,
@@ -223,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D795338183835580062D190 /* InfoPlist.strings in Resources */,
-				F6585F7B1851E30400C9074C /* AppleIncRootCertificate.cer in Resources */,
 				1D795340183835580062D190 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
