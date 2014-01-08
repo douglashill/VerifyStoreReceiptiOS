@@ -1,4 +1,7 @@
+**Note:** This sample project can not work because there will not be a receipt unless the app has been downloaded from the App Store, or an in-app purchase has been made. You must copy and adapt the code for an existing app that has already been released on the Store, or a new app with in-app purchases. It is not possible to create a sample project that you can simply download and run. Sorry.
+
 # VerifyStoreReceiptiOS
+
 Rick Maddy, Matthew Stevens, Ruotger Skupin, Apple, Dave Carlton, Fraser Hess, anlumo, yene, David Keegan, Alessandro Segala.
 
 These files are based off of the [roddi/ValidateStoreReceipt](https://github.com/roddi/ValidateStoreReceipt) project.
